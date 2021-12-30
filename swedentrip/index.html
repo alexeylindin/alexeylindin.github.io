@@ -67,6 +67,8 @@
         for (const p of pts) {
             L.marker(p).addTo(map)
         }
+        var polyline = L.polyline(pts, {color: 'red'}).addTo(map);
+        map.fitBounds(polyline.getBounds());
     });
 </script>
 </html>
